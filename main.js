@@ -1,7 +1,6 @@
+// Scroll to section function
 $(document).ready(function(){
     $("li").on('click', function(event) {
-        // console.log(event.target.value)
-        console.log(event.target.innerHTML)
         let section;
         if(event.target.innerHTML === 'Home') {
             section = 'home';
@@ -14,16 +13,15 @@ $(document).ready(function(){
         } else if(event.target.innerHTML === 'Contato') {
             section = 'contact';
         }
-
         $('html, body').animate({
             scrollTop: document.getElementById(section).offsetTop
         }, 800);
     });
 });
 
+// Open/Close Mobile menu
 function openMenu() {
     let menu = document.getElementById('overflow')
-    console.log(menu.style.display)
     if(menu.style.display !== 'block') {
         menu.style.display = 'block';
     } else {
