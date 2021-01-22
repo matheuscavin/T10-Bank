@@ -3,10 +3,12 @@
 <head>
     <title>T10 Bank</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!--    <meta name="viewport" content="width=device-width,initial-scale=1.0">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link href="style.css" type="text/css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel='icon' href='./assets/favicon.png' type='image/x-icon'/>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"></head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <body>
@@ -20,7 +22,18 @@
                 <li>Portfólio</li>
                 <li>Contato</li>
             </ul>
-            <div class="menu"><img src="./assets/menuIcon.png" alt=""></div>
+            <div class="menu" onclick="openMenu()">
+                <img src="./assets/menuIcon.png" alt="">
+                <div id="overflow" class="overflowMenu">
+                    <ul class="menuList">
+                        <li>Home</li>
+                        <li>Sobre nós</li>
+                        <li>Serviços</li>
+                        <li>Portfólio</li>
+                        <li>Contato</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </header><!--Header-->
     <div id="home" class="mainContainer">
@@ -31,7 +44,7 @@
         </div>
         <img class="mainImage" src="./assets/2905211.svg" alt="">
     </div><!--Main div-->
-    <div id="aboutUs" class="divPosition">
+    <div id="aboutUs" class="sectionPosition">
         <div class="titleContainer">
             <div class="title">SOBRE NÓS</div>
             <div class="badge"></div>
@@ -48,7 +61,7 @@
             </div>
         </div>
     </div><!--About us-->
-    <div id="services" class="divPosition">
+    <div id="services" class="sectionPosition">
         <div class="titleContainer">
             <div class="title">SERVIÇOS</div>
             <div class="badge"></div>
